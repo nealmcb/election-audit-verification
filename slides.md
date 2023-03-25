@@ -44,10 +44,29 @@ Modify the slides.md and reload browser page
 
 ---
 ## Introduction
+* Bullets...
 
-![example.jpg](example.jpg)
+---
+## Image scaling
+Untouched image overflows to the right
+![Example Image](image.png)
 
+---
+## Show scaled image via HTML img tag width="750"
+
+<img src="image.png" width="750">
+
+Perhaps works up to width=800?
 ???
-how to resize images?
 
-how to change font size?
+---
+## TODO
+Tried Scaled to 50 px, from some github issue comment, but this (with leading "!") doesn't work - just get a blank screen...
+
+[:scale 50px](image.png)
+
+Perhaps I need to install a plugin or something?
+
+How to change font size?
+
+How to add a QR code to link to the online version?
