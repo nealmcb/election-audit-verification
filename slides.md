@@ -57,6 +57,11 @@ Untouched image overflows to the right
 <img src="image.png" width="750">
 
 Perhaps works up to width=800?
+
+Also works:
+
+`convert orig.png -resize 50% smaller.png`
+
 ???
 
 ---
