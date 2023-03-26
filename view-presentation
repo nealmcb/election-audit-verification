@@ -1,0 +1,18 @@
+#!/usr/bin/bash
+# View the presentation in this directory by running a python server and opening a browser
+# https://stackoverflow.com/questions/59895/how-do-i-get-the-directory-where-a-bash-script-is-located-from-within-the-script
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+cd $SCRIPT_DIR
+
+# First deal with possibility that a server is already running on port 8000....
+pkill -f 'python3 -m http.server'
+python3 -m http.server &
+
+sensible-browser http://localhost:8000/ &
+
+echo bye
+
+# Why does emacs lock up when I run it from there, until I hit ctrl-g?
+# Waiting for process to die...done
+# (Shell command failed with error)

@@ -15,12 +15,11 @@ Slide notes here
 
 See also README.md
 
-Startup:
+Quickstart:
 
 fn=corla-evn2023
 
-To display, run:  python3 -m http.server
-	google-chrome http://localhost:8000/
+To display, run `view-presentation`
 To make pdf, run: decktape http://localhost:8000/#1  $fn.pdf
 To publish, run: rsync -av --exclude '.git' ../$fn bcn:public_html/elections
 

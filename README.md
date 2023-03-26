@@ -4,4 +4,5 @@
 3. Serve your presentation over HTTP using one of the following methods (or others)
     1. Commit your presentation to the `gh-pages` branch of a Git repository and push it to GitHub
     2. Serve the presentation from your local harddrive with Python, using either `python -m SimpleHTTPServer` or `python3 -m http.server`
+	  1. The `./view-presentation` script will do this
 4. Enjoy the applause after presenting your amazing talk
