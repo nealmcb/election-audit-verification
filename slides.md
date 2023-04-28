@@ -1,10 +1,8 @@
 class: center, middle
 
-### Title
+### MyTitles
 
-Election Verification Network conference
-
-Panel: Neal McBurnett
+Neal McBurnett
 
 2023-03-16
 
@@ -17,13 +15,13 @@ See also README.md
 
 Quickstart:
 
-fn=corla-evn2023
+fn=corla-evn2023  # Adjust to current directory name == slug
 
 To display, run `view-presentation`
 To make pdf, run: decktape http://localhost:8000/#1  $fn.pdf
-To publish, run: rsync -av --exclude '.git' ../$fn bcn:public_html/elections
+To publish, run: rsync -av --exclude '.git' --exclude 'neal-ignore' ../$fn bcn:public_html/elections
 
-First, change the title and <meta property... in the index.html
+First, change the MyTitles including <meta property... in the index.html
 
 Use '?' hotkey for documentation
 
@@ -31,8 +29,8 @@ Modify the slides.md and reload browser page
 
 ---
 ## Neal McBurnett
-* Consultant
-* Software developer
+* Consultant on Big Data, Election Integrity, Voting Methods
+* Software developer, Ex-Bell Labs
 * Working on election audits and integrity since 2003
 * Poll worker
 * Pioneered RLAs in Colorado with my own code in 2010, Boulder County
