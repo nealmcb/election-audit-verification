@@ -18,7 +18,13 @@ Quickstart:
 fn=corla-evn2023  # Adjust to current directory name == slug
 
 To display, run `view-presentation`
-To make pdf, run: decktape http://localhost:8000/#1  $fn.pdf
+To make QR code:
+  echo https://bcn.boulder.co.us/~neal/talks/$fn
+  test it
+  qr-code-generator  # enter URL command line when prompted
+  add ![QR Code](qr_code.png)
+
+To make pdf, run: OPENSSL_CONF=/dev/null decktape http://localhost:8000/#1  $fn.pdf
 To publish, run: rsync -av --exclude '.git' --exclude 'neal-ignore' ../$fn bcn:public_html/elections
 To visit: google-chrome https://bcn.boulder.co.us/~neal/elections/$fn
 
@@ -31,13 +37,12 @@ Modify the slides.md and reload browser page
 ---
 ## Neal McBurnett
 * Consultant on Big Data, Election Integrity, Voting Methods
-* Software developer, Ex-Bell Labs
+* Computer Scientist, Ex-Bell Labs
 * Working on election audits and integrity since 2003
 * Poll worker
-* Pioneered RLAs in Colorado with my own code in 2010, Boulder County
-* On teams that wrote the software for Colorado's current state-wide audit
+* Pioneered RLAs for Boulder (2010) and Colorado's current state-wide audit
 * Verified Voting Board member
-* LWV Colorado Election Security position, 2022
+* Colorado Bipartisan Election Advisory Commission member
 * Speaking for myself
 
 ---
