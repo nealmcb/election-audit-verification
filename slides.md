@@ -36,55 +36,64 @@ Modify the slides.md and reload browser page
 # Public Election Verification
 
 - Goal
-  - Enable canvass board members and the public to validate the tabulation of an election
+  - Enable canvass board members and the public to independently validate the tabulation of an election
+  - Evidence-Based Elections
+  - Software independence of and transparency of audit, rather than relying on hosted ColoradoRLA software
 - What problem does this solve?
-  - Canvass board members are unable to do their own validation of the correct scanning of ballots.
-  - Members of the public are unaware that elections are audited.
-  - Parts of the RLA and results tabulation are opaque to canvass boards and the public.
+  - No public commitment to CVR before the random seed selection.
+  - Parts of the RLA are opaque to canvass boards and the public.
+  - Canvass board members are unable to do their own validation of the correct tabulation of ballots.
 
 ---
 # Public Election Verification
 
 - Two main verification processes will be available:
-  - Canvass board members and the public will be able to attend an RLA and verify that the contest choices on audited ballots match the record of how those ballots were scanned.
+  - Canvass board members and the public will be able to attend an RLA and verify that the contest choices on audited ballots match the record of how those ballots were interpreted.
   - The public will be able to verify other aspects of the election, such as vote tabulation, based on public data.
 
 ---
-# On-Premises Verification of Ballot Scanning
+# On-Premises Verification of Ballot Interpretations
 
 - Public election verifiers at an RLA will be able to:
-  - Listen to an audit board read how contests were voted on audit ballots. Compare those votes to how the CVR file reports that the contests were voted. Note any discrepancies.
-  - The data in the CVR file will be made accessible by one or more tools (to be provided) which will either print or display the votes for the audited ballot.
+  - Listen to an audit board read how contests were voted on audited ballots.
+  - Compare those votes to how the CVR file reports that the contests were voted.
+  - Conveniently note any seeming discrepancies.
+  - They must not interrupt the work of the audit board.
+- The data in the CVR file will be made accessible by one or more tools (already prototyped) which will either print or display the votes of each audited ballot.
   - Observers can compare results after the RLA is complete.
 
 ---
-# On-Premises Verification of Ballot Scanning
+# Targeted Ballot Comparison
 
+- Even simpler, more direct, more transparent audit.
+- Allows for a bit more verification responding to specific contests or ballots of public interest.
 - Public election verifiers will also be able to:
   - Select additional paper ballots (probably ten or fewer) to be compared to their CVR entries.
     - The additional ballots can be chosen by combining possible values of tabulator, batch, and ballot number, or
-    - They can be chosen directly from the ballot boxes by a county election staff member or an election judge based on a request from the public election verifier (“Pull the 10th ballot from the 3rd batch in that box  there.”).
+    - They can be chosen directly from the ballot boxes by a county election staff member or an election judge based on a request from the public election verifier (“Pull the 10th ballot from the 3rd batch in that box there.”).
     - Election judges from the available audit teams will read how the ballot was voted so that the verifier can compare the choices to the ballot’s CVR entry.
 
 ---
 # Other Election Verification Actions
 
-- Based on data that will be made public and using an open-source application, the public can:
+- Based on public data, using an open-source application of their choice, the public can:
+  - Verify that when the votes in the redacted CVR file are counted, the vote totals are the same as the reported contest results.
   - Verify that the CVR file being used is identical to the redacted CVR file that was produced before the selection of the random seed.
   - Verify that the ballots that were selected to be audited are the ballots that would have been chosen by the RLA software given the random seed.
-  - Verify that when the votes in the CVR file are counted, the vote totals are the same as the reported contest results.
 
 ---
 # Data To Be Provided by the County
 
-- The data needed from the county in order to perform these verification tasks are:
-  - The redacted cast vote record for the county’s election, produced and hashed before the selection of the random seed.
-    - A tool for redacting CVR files will be provided.
-  - The ballot manifest
-  - The list of ballot sheets to be audited, preferably associated with the audit board that will be reading out those ballots.
-  - The summary results file, with contest results as of the RLA.
-  - The hashes for both the redacted CVR file and the ballot manifest.
+The data needed from the county in order to perform these verification tasks are:
 
+- Before the random selection:
+  - The manifest and its hash (as already available in the AuditCenter)
+  - Generate the redacted cast vote record, publish the hash
+  - A tool for redacting CVR files has been prototyped and will be provided.
+
+- Before the work of the audit boards:
+  - The list of ballot sheets to be audited, preferably associated with the audit board that will be reading out those ballots.
+  - The summary contest results file
 
 ???
 ## Image scaling
