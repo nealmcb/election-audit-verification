@@ -33,7 +33,7 @@ Use '?' hotkey for documentation
 Modify the slides.md and reload browser page
 
 ---
-# Public Election Verification
+# Election Audit Verification
 
 - Goal
   - Enable canvass board members and the public to independently validate the tabulation of an election
@@ -45,7 +45,7 @@ Modify the slides.md and reload browser page
   - Canvass board members are unable to do their own validation of the correct tabulation of ballots.
 
 ---
-# Public Election Verification
+# Approach
 
 - Two main verification processes will be available:
   - Canvass board members and the public will be able to attend an RLA and verify that the contest choices on audited ballots match the record of how those ballots were interpreted.
